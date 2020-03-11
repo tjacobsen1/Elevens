@@ -34,6 +34,13 @@ $ git push origin a#
 
 ### Activities 1-5
 
+Change the # to the number of the activity you want to grab.
+
+```
+$ git fetch upstream a#
+$ git checkout -b a# upstream/a#
+```
+
 ### Later Activities
 
 The remaining activities have not all been pushed because each activity builds on the next. Sometimes activities have working versions of the problems from the previous activities.
