@@ -1,8 +1,8 @@
 # Elevens
 
-# Activity 7
+# Activity 8
 
-Answer the student guide questions before implementing the new `ElevensBoard` class. Be sure to focus on designing a working algorithm **before** examining the provided code. Your algorithm should be written in the language of the game, not using Java or programming terms. Then continue answering the questions while working through how the partially finished `ElevensBoard` class has been designed to implement the algorithm of playing a game of Elevens.
+One more final question-centric activity before you write the code. This one is important, because it gives a great example of how Inheritance can be used to avoid writing similar code in multiple places, and why Abstract classes are useful. Don't breeze through this one; there is a lot of information, but it is important to understand the structure of the solution you will be asked to write or the later activities will not go well.
 
 ## Submitting
 
