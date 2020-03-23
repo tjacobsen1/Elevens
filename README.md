@@ -1,8 +1,14 @@
 # Elevens
 
-# Activity 8
+# Activity 9
 
-One more final question-centric activity before you write the code. This one is important, because it gives a great example of how Inheritance can be used to avoid writing similar code in multiple places, and why Abstract classes are useful. Don't breeze through this one; there is a lot of information, but it is important to understand the structure of the solution you will be asked to write or the later activities will not go well.
+Finally you get to write some code! Be sure to look at the provided `Card`, `Deck`, and `Board` classes before diving in to implement to functions in `ElevensBoard.java`. Knowing what information is available from what objects, and what useful functions you can call will make your job easier.
+
+### Aside
+
+The `CardGameGUI` class may look intimidating at first glance, and it is not something you need to change. It handles all of the graphics and interactions for the game so you can focus on writing the game algorithm itself.
+
+Focus on `ElevensBoard` first, but if you would like to see an example of some next-level uses of object oriented design take a glance through it. It is not necessary to understand every line of code within it (or even most of it) to use it, or finish our assignment. Within, you may recognize some of the patterns you have already seen. Inheritance, interfaces, and composition are all used together to create the fairly complicated user interface with not very much code. Most of the problems it solves it does so by finding the right object to talk to, and sending that object the right message at the right time. This code is a reminder that there are still plenty of challenges left in your journey, should you choose to continue on with computer science.
 
 ## Submitting
 
