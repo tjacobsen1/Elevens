@@ -54,6 +54,12 @@ public class ElevensBoard extends Board {
 	@Override
 	public boolean isLegal(List<Integer> selectedCards) {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 9 *** */
+		if(selectedCards.size() == 2) {
+			return containsPairSum11(selectedCards);
+		} else  if (selectedCards.size() == 3) {
+			return containsJQK(selectedCards);
+		} 
+		return false;
 	}
 
 	/**
@@ -67,6 +73,11 @@ public class ElevensBoard extends Board {
 	@Override
 	public boolean anotherPlayIsPossible() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 9 *** */
+		List<Integer> indexes = cardIndexes();
+		if(!containsPairSum11(indexes)) {
+			return containsJQK(indexes);
+		}
+		return true;
 	}
 
 	/**
@@ -78,8 +89,19 @@ public class ElevensBoard extends Board {
 	 *              contain an 11-pair; false otherwise.
 	 */
 	private boolean containsPairSum11(List<Integer> selectedCards) {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 9 *** */
-	}
+        /*  TO BE IMPLEMENTED IN ACTIVITY 9  */
+        if ( selectedCards.size() < 2){
+            return false; 
+        } 
+        for (int i = 0; i <selectedCards.size() - 1; i++ ){
+            for(int j = i + 1; j < selectedCards.size(); j++){
+                if(cardAt(selectedCards.get(i)).pointValue() + cardAt(selectedCards.get(j)).pointValue() == 11){
+                    return true; 
+                }
+            }
+        }
+        return false;
+    }
 
 	/**
 	 * Check for a JQK in the selected cards.
@@ -91,5 +113,24 @@ public class ElevensBoard extends Board {
 	 */
 	private boolean containsJQK(List<Integer> selectedCards) {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 9 *** */
+		boolean hasKing = false;
+		boolean hasQueen = false;
+		boolean hasJack = false;
+
+		if (selectedCards.size() < 3) {
+			return false;
+		}
+		for(int i = 0; i < selectedCards.size(); i++) {
+			if (cardAt(selectedCards.get(i)).rank() == "king") {
+				hasKing = true;
+			}
+			else if (cardAt(selectedCards.get(i)).rank() == "queen") {
+				hasQueen = true;
+			}
+			else if (cardAt(selectedCards.get(i)).rank() == "jack") {
+				hasJack = true;
+			}
+		}
+		return (hasKing && hasQueen && hasJack);
 	}
 }
